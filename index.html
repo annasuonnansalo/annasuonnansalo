@@ -9,61 +9,79 @@
             body {
                 font-family:"Helvetica";
                 font-size:12px;
-                line-height:1.4em;
+                line-height:1.4;
                 color: rgb(71, 60, 52);
                 background: rgb(232, 230, 223);
+                padding-top: 70px;
             }
+            
             h1 {
                 font-size:3em;
                 text-align: center;
-                padding-top: 3.5%;
+                text-decoration: underline;
             }
             
             h2, h3 {
                 text-transform:uppercase;
                 color: rgb(69, 65, 57);
-                line-height:2em;
             }
             
             time {
-                font-size:9px;
-                font-weight:bold;
+                font-size: 9px;
+                font-weight: bold;
                 opacity: 0.4;
             }
             a {
-                text-decoration:none;
-                color:rgb(222, 126, 0);
-            }
-            p {
-                line-height:1.2em;
+                text-decoration: none;
+                color: rgb(222, 126, 0);
             }
             
-            div {
+            .content, .sidebar {
                 margin: 2px;
-                padding:5px;
+                padding-right: 10px;
+                padding-left: 10px;
             }
             
             ul {
-                padding-left: 20px;
+                padding-left: 14px;
             }
             
+            article {
+                background: rgb(250, 250, 250);
+                border: 2px solid rgb(184, 184, 184);
+                margin-bottom: 15px;
+                padding: 9px;
+                padding-bottom: 20px;
+            }
             .header {
-                background: rgb(148, 175, 255);
-                height: 100px;
+                background: rgb(232, 230, 223);
+                overflow: hidden;
+                height: 70px;
+                width: 100%;
+                position:fixed;
+                top: 0;
+                z-index: 5;
+            }
+            .header h1 {
+                margin: 10px 0;
             }
             
             .content {
-                background: rgb(255, 158, 255);
-                position: relative;
+                background: rgb(232, 230, 223);
                 float: left;
-                width: calc(75% - 16px);
+                margin-bottom: 40px;
+                width: calc(75% - 40px);
             }
             
             .sidebar {
-                background: rgb(158, 255, 179);
+                background: rgb(250, 250, 250);
                 position: relative;
                 float: right;
-                width: calc(25% - 16px);
+                width: calc(25% - 20px);
+                margin-bottom: 40px;
+                border: 2px solid rgb(184, 184, 184);
+                padding-top: 15px;
+                line-height: 1.5;
             }
             
             .clearfix {
@@ -71,9 +89,12 @@
             }
             
             .footer {
-                background: rgb(166, 231, 255);
-                width:100%;
-                height: 30px;
+                background: rgb(214, 214, 214);
+                width: 100%;
+                height: 40px;
+                text-align: center;
+                opacity: 0.4;
+                overflow: hidden;
             }
         </style>
         
@@ -84,8 +105,8 @@
   </div>    
 
 <div class="sidebar">
-
-    <h3>Favorite posts</h3>
+    <article>
+    <h3>Fav posts</h3>
         
         <ul>
             <li><a href="#first-post">First post!</a></li>
@@ -93,34 +114,44 @@
             <li><a href="#getting-there">Getting there.... maybe</a></li>
             <li><a href="#dumbass">Am I a dumbass?</a></li>
         </ul>
-    
-     <h3>Socials</h3>
-    
+      </article>  
+      <article>
+        <h3>Socials</h3>
             <p> If you want to follow me elsewhere give these a look</p>
             <ul>
                 <li><a href="https://www.instagram.com/accounts/login/">Instragram</a></li>
                 <li><a href="https://www.pinterest.co.uk">Pinterest</a></li>
             </ul>
-</div>   
-        
+        </article>
+</div>        
     <div class="content">
+    <article>
         <h2 id="first-post">First post - COVID-19 Lockdown</h2>
         
         <p>I am off work for 3 weeks due to COVID-19 outbreak so I decided to learn something. I've started coding like 3 times now but lack of time (and laziness) has stopped me from continuing so I'm hoping this time I will get a bit further ahead.<br>I try to keep a normal routine in lockdown - wake up at 7am get dressed etc, go for a walk most evenings for our allowed 1 hour of outside exercise. Go shopping once a week. And learning this to make good use of my time but also not to be bored or run out of things to do.<br> So far I've learned about all kinds of tags, values and properties but I keep forgetting what is what. Tags are the easiest. I just need to use their proper names more.
 </p>
         <time datetime="2020-03-25">Posted on 25th of March</time>
+    </article>
         
+    <article>
         <h2 id="downtown">Making my way downtown</h2>
         
-        <p>Today I am making this blog. Maybe it's not a bad idea to write down my coding journey. Even if it seems cringey now. And probably later too. I've never had a proper diary, well, not since I was 6 years old.</p>
+        <p>Today I am making this blog. Maybe it's not a bad idea to write down my coding journey - even if it seems cringey now. And probably later too. I've never had a proper diary, well, not since I was 6 years old. Not sure how long I'll keep it up.</p>
         
         <time datetime="2020-03-26">Posted 26th of March 2020</time>
+    </article>
         
+    <article>
+            
         <h2 id="getting-there">Getting there... maybe</h2>
         
-        <p>Maybe I have got a knack for this now. I do find typing difficult as I have never used these keys so much.</p>
+        <p>Maybe I have got a knack for this now. Who knows. I do find typing difficult as I have never used these keys so much. I finished my basic lessons on Khan Academy so now I am trying to work on a project and see how far I get. It was much easier to complete tasks and assingments but it always is. This is where the real learning begins.</p>
         
-        <Time datetime="2020-03-27">Posted ever further away in the future</time>
+        <time datetime="2020-03-27">Posted ever further away in the future</time>
+        
+    </article>
+        
+    <article>
         
         <h2 id="dumbass">Am I a dumbass?</h2>
         
@@ -128,7 +159,9 @@
         
         <Time datetime="2020-03-28">Posted a week from now maybe.</time>
         
+    </article>
  </div>
+ 
 <div class="clearfix"></div>
  
  <div class="footer">
